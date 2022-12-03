@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown Bar</title>
+    <style>
+        body{
+            margin: 0%;
+        }
+        header h1{
+            background-color: aqua;
+            margin: 0%;
+            border: 1px solid black;
+            padding: 20px;
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+        .navigation {
+            position: sticky ;
+            margin: 0px;
+            top: 10px;
+            z-index: 1;
+            background-color: rgb(113, 74, 253);
+        }
+        .navigation li {
+            display: inline-block;
+            padding: 10px;
+            font-size: 20px;
+        }
+        .navigation li a {
+            color: blue;
+            font-size: 18px;
+            text-decoration: none;
+        }
+        .navigation li:hover {
+            background-color: brown;
+        }
+        .navigation li:nth-child(2):hover #Dropdown_1, .navigation li:nth-child(3):hover #Dropdown_2{
+            display: block;
+        }
+        #Dropdown_1, #Dropdown_2 {
+            position: absolute;
+            width: auto;
+            max-width: 150px;
+            display: none;
+            top: 42px;
+            background-color: rgb(243, 227, 0);
+            padding: 0%;
+        }
+        #Dropdown_1 li, #Dropdown_2 li {
+            display: block;
+        }
+        #Dropdown_1 li:hover, #Dropdown_2 li:hover {
+            background-color: rgb(148, 0, 0);
+        }
+        #Dropdown_1 li a, #Dropdown_2 li a{
+            color: steelblue;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Demo of DropDown</h1></header>
+    <nav id="navigate">
+     <ul class="navigation">
+        <li><a href="#">LINK 1</a></li>
+        <li>
+            <a href="#">LINK 2</a>
+            <ul id="Dropdown_1">
+                <li><a href="#">RR_link 1</a></li>
+                <li><a href="#">RR_link 2</a></li>
+                <li><a href="#">RR_link 3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">LINK 3</a>
+            <ul id="Dropdown_2">
+                <li><a href="#">SS_link 1</a></li>
+                <li><a href="#">SS_link 2</a></li>
+                <li><a href="#">SS_link 3</a></li>
+                <li><a href="#">SS_link 4</a></li>
+            </ul>
+        </li>
+    </nav>    
+   </ul>
+</body>
+</html>
