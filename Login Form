@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail Account login</title>
+    <style>
+        .body {
+            margin: 0%;
+        }
+
+        .container {
+            width: 25vw;
+            border: 2px solid black;
+            margin: 25vh 40vw;
+            position: absolute;
+        }
+
+        .loginform {
+            margin: 3vh;
+            width: 20vw;
+            height: 30px;
+        }
+
+            .loginform:focus {
+                outline: none;
+                color: white;
+                background-color: steelblue;
+                opacity: 0.35;
+            }
+
+        .form_container {
+            border: 2px solid whitesmoke;
+        }
+
+        #myVideo {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .button {
+            background-color: dodgerblue;
+            height: 30px;
+            margin-left: 3vh;
+            margin-bottom: 2vh;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <video autoplay muted loop id="myVideo">
+        <source src="video.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <form action="loginForm.html" class="form_container">
+            <h2 class="loginform">Create Gmail Account</h2>
+            <input type="text" id="fullname" class="loginform" name="fname" placeholder="Full Name" required /><br />
+            <input type="number" id="Contact" class="loginform" placeholder="Contact Number" name="contact" min=6000000000 max=9999999999 required /><br />
+            <input type="email" id="email" class="loginform" placeholder="Enter mail id" name="mail" required /><br />
+            <!-- <button id="reset">Reset</button>
+            <button id="submit">Submit</button> -->
+            <input type="reset" value="Reset" class="button">
+            <input type="submit" value="Submit" class="button">
+        </form>
+    </div>
+
+</body>
+</html>
